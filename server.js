@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import { inject } from '@vercel/analytics';
 import connectDB from './config/db.js';
 
 import authRoutes from './routes/authRoutes.js';
@@ -10,6 +11,9 @@ import resultRoutes from './routes/resultRoutes.js';
 dotenv.config();
 
 connectDB();
+
+// Initialize Vercel Analytics
+inject();
 
 const app = express();
 

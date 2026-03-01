@@ -19,6 +19,7 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
